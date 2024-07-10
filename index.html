@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur Audio Élégant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Éditeur Audio Élégant</h1>
+    </header>
+
+    <main>
+        <div class="control-panel">
+            <input type="file" id="audioInput" accept="audio/mp3">
+            <button id="playPause">Lecture/Pause</button>
+            <button id="cut">Couper</button>
+            <button id="downloadMP3" disabled>Télécharger MP3</button>
+            <input type="number" id="startTime" placeholder="Début (s)" step="0.1">
+            <input type="number" id="endTime" placeholder="Fin (s)" step="0.1">
+        </div>
+        <div id="waveform"></div>
+        <div id="wave-timeline"></div>
+        <div class="info-panel">
+            <div id="time-position">Position : 0.000 s</div>
+            <div id="duration">Durée totale: 0.000 s</div>
+            <div id="cutResult"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Éditeur Audio Élégant. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bibliothèques JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.6.3/wavesurfer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.6.3/plugin/wavesurfer.timeline.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.6.3/plugin/wavesurfer.cursor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
